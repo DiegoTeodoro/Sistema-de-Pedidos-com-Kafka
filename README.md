@@ -88,7 +88,3 @@ Para apagar também os dados armazenados no volume:
 ```bash
 docker compose down -v
 ```
-
-## Explicação para entrevista
-
-A API recebe um pedido pelo endpoint REST. O Controller chama o Producer, que publica o objeto em formato JSON no tópico `pedidos`. O Consumer pertence ao grupo `grupo-pedidos`, fica inscrito nesse tópico e processa a mensagem de forma assíncrona. Dessa maneira, quem produz a mensagem não precisa conhecer diretamente quem irá consumi-la.
